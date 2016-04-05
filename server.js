@@ -21,5 +21,5 @@ app.post('/api/posts', function (req, res) {
   console.log('post received')
   console.log(req.body.username)
   console.log(req.body.body)
-  res.send(201)
+  res.sendStatus(201)
 })

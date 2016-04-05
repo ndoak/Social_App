@@ -1,3 +1,6 @@
 {
-  "name": "socialapp"
+  "name": "socialapp",
+  "dependencies": {
+    "mongoose": "^4.4.11"
+  }
 }

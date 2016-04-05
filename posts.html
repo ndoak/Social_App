@@ -18,6 +18,12 @@
   <script>
     var app = angular.module('app', [])
     app.controller('PostsCtrl', function ($scope) {
+      $scope.addPost = function() {
+        $scope.posts.unshift({
+          username: 'ndoak',
+          body: 'my new post'
+        })
+      }
       $scope.posts = [
         {
           username: 'ndoak',

@@ -12,7 +12,7 @@ app.get('/api/posts', function (req, res, next) {
 })
 
 app.get('/', function(req, res) {
-  res.sendFile('layouts/posts.html')
+  res.sendfile('layouts/posts.html')
 })
 
 app.post('/api/posts', function (req, res, next) {

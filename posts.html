@@ -3,9 +3,27 @@
 <head>
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
-<body>
+<body ng-app='app'>
+  <script>
+    var app = angular.module('app',[])
+    app.controller('PostsCtrl', function ($scope) {
+      $scope.posts = [
+        {
+          username: 'ndoak',
+          body: 'Node rules!'
+        },
+        {
+          username: 'natdoak',
+          body: 'trying out angular.js'
+        }
+      ]
+    })
+  </script>
   <div class = "container">
     <h1>Recent Posts </h1>
+    <div ng-controller='PostsCtrl'>
+      {{ posts[0].body }}
+    </div>
     <ul class = 'list-group'>
       <li class = 'list-group-item'>
         <span>Node rules!</span>
@@ -15,5 +33,6 @@
       </li>
     </ul>
   </div>
+  <script src = 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
 </body>
 </html>

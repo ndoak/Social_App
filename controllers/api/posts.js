@@ -7,7 +7,7 @@ var Post = require('../../models/post')
 router.get('/posts', function (req, res, next) {
   Post.find()
   .sort('-date')
-  .exec(function (err, posts) {
+  .exec(function(err, posts) {
     if (err) { return next(err) }
     res.json(posts)
   })

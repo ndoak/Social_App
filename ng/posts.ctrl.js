@@ -1,6 +1,6 @@
 anuglar.module('app')
-.controller('PostsCtrl', function ($scope, PostsSvc) {
-  $scope.addPost = function () {
+.controller('PostsCtrl', function($scope, PostsSvc) {
+  $scope.addPost = function() {
     if ($scope.postBody) {
       PostsSvc.create({
         username: 'ndoak',

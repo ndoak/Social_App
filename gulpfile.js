@@ -1,11 +1,9 @@
 var gulp = require('gulp')
-var concat = require('gulp-concat')
-var sourcemaps = require('gulp-sourcemaps')
-var uglify = require('gulp-uglify')
-var ngAnnotate = require('gulp-ng-annotate')
-var fs = require('fs')
+var fs   = require('fs')
 fs.readdirSync(__dirname + '/gulp').forEach(function (task) {
   require('./gulp/' + task)
 })
 
-gulp.task('dev', ['watch:js', 'watch:css', 'dev:server'])
+gulp.task('build', ['js', 'css'])
+gulp.task('watch', ['watch:js', 'watch:css'])
+gulp.task('dev', ['watch', 'dev:server'])

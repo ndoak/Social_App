@@ -7,10 +7,9 @@ exports.connect = function (server) {
   wss.on('connection', function (ws) {
     clients.push(ws)
     exports.broadcast('new client joined')
-
-  ws.on('close', function () {
-    _.remove(clients, ws)
-  })
+    ws.on('close', function () {
+      _.remove(clients, ws)
+    })
   })
 }
 

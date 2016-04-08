@@ -1,4 +1,3 @@
-
 var router = require('express').Router()
 var websockets = require('../../websockets')
 var pubsub = require('../../pubsub')
@@ -7,7 +6,7 @@ var Post = require('../../models/post')
 router.get('/posts', function (req, res, next) {
   Post.find()
   .sort('-date')
-  .exec(function(err, posts) {
+  .exec(function (err, posts) {
     if (err) { return next(err) }
     res.json(posts)
   })

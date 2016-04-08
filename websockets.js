@@ -1,12 +1,12 @@
-var _ = require('lodash')
+var _  = require('lodash')
 var ws = require('ws')
+
 var clients = []
 
 exports.connect = function (server) {
   var wss = new ws.Server({server: server})
   wss.on('connection', function (ws) {
     clients.push(ws)
-    exports.broadcast('new client joined')
     ws.on('close', function () {
       _.remove(clients, ws)
     })

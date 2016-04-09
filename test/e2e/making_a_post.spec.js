@@ -7,9 +7,6 @@ describe('making a post', function () {
     // click login
     element(by.css('nav .login')).click()
 
-    // click 'register'
-    element(by.css('nav .register')).click()
-
     // fill out and submit login form
     element(by.model('username')).sendKeys('ndoak')
     element(by.model('password')).sendKeys('pass')
@@ -20,8 +17,7 @@ describe('making a post', function () {
     element(by.model('postBody')).sendKeys(post)
     element(by.css('form .btn')).click()
 
-    element.all(by.css('ul.list-group li')).first().getText().then(function (text) {
-      expect(text).to.contain(post)
+    expect(element.all(by.css('ul.posts li')).first().getText()).to.eventually.contain(post)
     })
   })
 

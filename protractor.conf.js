@@ -3,7 +3,11 @@ exports.config = {
   specs: [
     'test/e2e/**/*.spec.js'
   ],
-  mocha0pts: {
+  mochaOpts: {
     enableTimeouts: false
+  },
+  onPrepare: function () {
+    process.env.PORT = 3001
+    require('./server')
   }
 }

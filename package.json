@@ -1,5 +1,8 @@
 {
   "name": "socialapp",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha && ./node_modules/.bin/protractor"
+  },
   "dependencies": {
     "bcrypt": "^0.8.5",
     "body-parser": "^1.15.0",

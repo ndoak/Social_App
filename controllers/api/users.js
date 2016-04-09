@@ -1,4 +1,3 @@
-
 var router = require('express').Router()
 var bcrypt = require('bcrypt')
 var jwt    = require('jwt-simple')

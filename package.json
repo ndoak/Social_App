@@ -14,10 +14,12 @@
     "jwt-simple": "^0.5.0",
     "lodash": "^4.9.0",
     "mongoose": "^4.4.11",
+    "morgan": "^1.7.0",
     "redis": "^2.5.3",
     "ws": "^1.0.1"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "mocha": "^2.4.5",
     "protractor": "^3.2.2"
   }

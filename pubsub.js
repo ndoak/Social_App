@@ -9,6 +9,7 @@ function newClient() {
   }
   return client
 }
+
 var client = newClient()
 
 exports.publish = function (topic, data) {

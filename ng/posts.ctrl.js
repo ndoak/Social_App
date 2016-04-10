@@ -3,7 +3,7 @@ angular.module('app')
   $scope.addPost = function () {
     if ($scope.postBody) {
       PostsSvc.create({
-        body: $scope.postBody
+        body:     $scope.postBody
       })
       .then(function () {
         $scope.postBody = null
